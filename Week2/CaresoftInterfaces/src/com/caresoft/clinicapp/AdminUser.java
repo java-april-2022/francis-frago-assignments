@@ -16,6 +16,7 @@ public class AdminUser extends User implements HIPAACompliantAdmin, HIPAAComplia
     	this.role = role;
 //    	this.securityIncidents = securityIncidents;
     }
+    
     // Implement HIPAACompliantUser!
     @Override
     public boolean assignPin(int pin) {

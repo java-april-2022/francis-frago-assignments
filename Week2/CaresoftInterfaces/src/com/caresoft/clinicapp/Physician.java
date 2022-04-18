@@ -27,18 +27,18 @@ public class Physician extends User implements HIPAACompliantUser {
     @Override
     public boolean assignPin(int pin) {
     	// Auto-generated method stub
-    	if(String.valueOf(pin).length()==4) {
-    		this.pin =pin;
-    		return true;
-    	}
-    	else {
+    	if(pin< 0001|| pin> 9999) {
     		return false;
-    	}
+    		}
+    		else{
+    		this.pin= pin;
+    	return true;
+    		}
     }
     
     @Override
     public boolean accessAuthorized(Integer confirmedAuthID) {
-    	// TODO Auto-generated method stub
+    	// Auto-generated method stub
     	if(this.id == confirmedAuthID) {
     		return true;
     	}
@@ -47,7 +47,6 @@ public class Physician extends User implements HIPAACompliantUser {
     	}
     }
         
-
 	// Setters & Getters
 	public ArrayList<String> getPatientNotes() {
 		return patientNotes;

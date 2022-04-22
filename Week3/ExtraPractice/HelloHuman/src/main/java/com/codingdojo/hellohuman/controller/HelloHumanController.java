@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloHumanController {
 
 	@RequestMapping("/")
-	public String index(
-			@RequestParam(value = "name", required = false) String firstName,
+	public String index(@RequestParam(value = "name", required = false) String firstName,
 			@RequestParam(value = "lastName", required = false) String lastName,
 			@RequestParam(value = "times", required = false) Integer times) {
 		String name = "Hello " + firstName + " " + lastName + " ";
@@ -17,15 +16,14 @@ public class HelloHumanController {
 
 		if (firstName == null) {
 			result = "Hello Human";
-		}
-		else if (times == null) {
+		} else if (times == null) {
 			result = name;
 		} else {
-			for (int i = 1; i<=times; i++) {
+			for (int i = 1; i <= times; i++) {
 				result = result + name;
 			}
-		}	
+		}
 		return result;
-		
+
 	}
 }

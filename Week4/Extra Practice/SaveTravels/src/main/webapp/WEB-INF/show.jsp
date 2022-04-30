@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Show Book</title>
+<title>Show Expense</title>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <script type="text/javascript" src="js/app.js"></script>
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -19,19 +19,16 @@
 <body>
 
 	<div class="card container mt-4">
-		<h1 class="card-header ">Book Detail</h1>
+		<h1 class="card-header">Save Travel Expense</h1>
 		<div class="card-body">
 			<div>
-				<h3>Title: <c:out value="${showBook.title}" /></h3>
-				<hr>
-					<h6>Description: <c:out value="${showBook.description}" /></h6>
-					<h6>Language: <c:out value="${showBook.language}" /></h6>
-					<h6>Number of Pages: <c:out value="${showBook.numberOfPages}" /></h6>
-				<hr>
-				<a href="/books" class="btn btn-outline-secondary">Return to Books Dashboard</a>
+				<h6>Description: <c:out value="${showExpense.expDescription}" /></h6>
+				<h6>Vendor: <c:out value="${showExpense.vendor}" /></h6>
+				<h6>Amount: $<c:out value="${showExpense.amount}" /></h6>
+				<a href="/expenses" class="btn btn-outline-secondary">Return Home</a>				
 			</div>
 		</div>
 	</div>
-
+	
 </body>
 </html>

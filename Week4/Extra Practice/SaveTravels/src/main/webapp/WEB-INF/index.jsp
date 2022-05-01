@@ -22,6 +22,7 @@
 		<div class="card-body">
 			<table class="table table-striped table-bordered mb-5">
 		        <tr>
+<<<<<<< HEAD
 		        	<th> Expenses: </th>
 		        	<th> Vendor: </th>
 		        	<th> Amount: </th>
@@ -31,15 +32,34 @@
 					<td><c:out value="${expense.name}"/></td>
 					<td><c:out value="${expense.vendor}"/></td>
 					<td>$<c:out value="${expense.amount}"/></td>
+=======
+		        	<th> Expenses </th>
+		        	<th> Vendor </th>
+		        	<th> Amount </th>
+		        	<th> Actions </th>
+		        </tr>
+			    <c:forEach var="expense" items="${allExpenses}">
+			    <tr>
+				<th><a href="/expenses/${expense.id}"><c:out value="${expense.expDescription}"/></a></th>
+					<td><c:out value="${expense.vendor}"/></td>
+					<td>$<c:out value="${expense.amount}"/></td>
+					<td><a href="/expenses/edit/${expense.id}" type="button">Edit</a></td>
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 		        </tr>
 			    </c:forEach>
 			</table>
 			<h3 class="card-text">Add an expense</h3>
 			<form:form action='/expenses' method = 'post' modelAttribute="expense">
 				<div class="form-group mt-3">
+<<<<<<< HEAD
 					<form:label path="name">Expense Name</form:label>
 					<form:errors path= "name" class="text-danger"/>
 					<form:input class="form-control" path= "name"/>
+=======
+					<form:label path="expDescription">Expense </form:label>
+					<form:errors path= "expDescription" class="text-danger"/>
+					<form:input class="form-control" path= "expDescription"/>
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 				</div>
 				<div class="form-group mt-3">
 		        	<form:label path="vendor">Vendor</form:label>
@@ -49,6 +69,7 @@
 				<div class="form-group mt-3">
 			        <form:label path="amount">Amount</form:label>
 			        <form:errors path="amount" class="text-danger"/>     
+<<<<<<< HEAD
 			        <form:input class="form-control" path="amount"/>
 				</div>
 				<div class="form-group mt-3">
@@ -57,10 +78,20 @@
 			        <form:textarea class="form-control" path="description"/>
 				</div>
 				<button class="btn btn-outline-primary mt-3">Submit</button>
+=======
+			        <form:input class="form-control" type="number" path="amount"/>
+				</div>
+				<!-- <input type="submit" value="Submit"/> -->
+				<button class="btn btn-outline-secondary mt-3">Submit</button>
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 			</form:form>
 		</div>
 		
 	</div>
 	
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097

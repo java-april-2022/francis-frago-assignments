@@ -28,9 +28,9 @@ public class ExpenseService {
     
     // return an expense
     public ExpenseModel findExpense(Long id) {
-        Optional<ExpenseModel> optionalExpense = expenseRepository.findById(id);
-        if(optionalExpense.isPresent()) {
-            return optionalExpense.get();
+        Optional<ExpenseModel> oneExpense = expenseRepository.findById(id);
+        if(oneExpense.isPresent()) {
+            return oneExpense.get();
         } else {
             return null;
         }
@@ -43,8 +43,8 @@ public class ExpenseService {
 
     // destroy an expense
     public void deleteExpense(Long id) {
-    	Optional<ExpenseModel> deleteExpenseAction = expenseRepository.findById(id);
-    	if(deleteExpenseAction.isPresent()) {
+    	Optional<ExpenseModel> deleteExpense = expenseRepository.findById(id);
+    	if(deleteExpense.isPresent()) {
     		expenseRepository.deleteById(id);
     	} 
     	else {

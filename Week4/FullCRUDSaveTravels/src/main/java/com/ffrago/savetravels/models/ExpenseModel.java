@@ -25,11 +25,11 @@ public class ExpenseModel {
     private Long id;
 
     @NotBlank
-    @Size(min=1, max=200, message="Expense name must be at least 2 character.")
+    @Size(min=2, max=200, message="Expense name must be at least 2 character.")
     private String name;
     
     @NotBlank
-    @Size(min=1, max=200, message="Vendor must be at least 2 character.")
+    @Size(min=2, max=200, message="Vendor must be at least 2 character.")
     private String vendor;
     
     @NotNull (message="Must not be blank")
@@ -37,7 +37,7 @@ public class ExpenseModel {
     private Float amount;
     
     @NotBlank
-    @Size(min=1, max=200, message="Expense description must be at least 2 character.")
+    @Size(min=2, max=200, message="Expense description must be at least 2 character.")
     private String description;
 
     // This will not allow the createdAt column to be updated after creation
@@ -51,7 +51,7 @@ public class ExpenseModel {
     public ExpenseModel() {
     }
     
-    public ExpenseModel(String name, String vendor, Float amount, String description) 	{
+    public ExpenseModel(@NotBlank String name, @NotBlank String vendor, @NotNull @Min(0) Float amount, @NotBlank String description) 	{
     	this.name = name;
     	this.vendor = vendor;
 		this.amount = amount;

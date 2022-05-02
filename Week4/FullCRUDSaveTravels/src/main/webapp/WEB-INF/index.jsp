@@ -53,7 +53,7 @@
 				<div class="form-group mt-3">
 			        <form:label path="amount">Amount:</form:label>
 			        <form:errors path="amount" class="text-danger"/>     
-			        <form:input class="form-control" path="amount"/>
+			        <form:input class="form-control" path="amount" type="number" step="0.01"/>
 				</div>
 				<div class="form-group mt-3">
 			        <form:label path="description">Description:</form:label>

@@ -20,12 +20,12 @@
 	<div class="card container mt-4">
 		<h1 class="card-header">Edit Travel Expense</h1>
 		<div class="card-body">
-			<form:form action="/expenses/${editExpense.id}" method="post" modelAttribute="editExpense">
+			<form:form action="/expenses/${expense.id}" method="post" modelAttribute="expense">
 				<input type="hidden" name="_method" value="put">
 				<div class="form-group">
 					<form:label path="name">Expense Name: </form:label>
 					<form:input class="form-control" path="name" />
-					<form:errors path="name" class="text-danger" />
+					<form:errors path="name" class= "text-danger" />
 				</div>
 				<div class="form-group mt-3">
 					<form:label path="vendor">Vendor: </form:label>
@@ -34,8 +34,8 @@
 				</div>
 				<div class="form-group mt-3">
 					<form:label path="amount">Amount: </form:label>
-					<form:input class="form-control" path="amount" />
-					<form:errors path="amount" />
+					<form:input class="form-control" path="amount" type="number" step="0.01"/>
+					<form:errors path="amount" class="text-danger"/>
 				</div>
 					<div class="form-group mt-3">
 					<form:label path="description">Description: </form:label>
@@ -44,7 +44,7 @@
 				</div>
 				<a class="btn btn-outline-secondary mt-3" href="/">Return Home</a>
                 &nbsp;
-				<button class="btn btn-outline-primary mt-3">Update Expense</button>
+				<input type="submit" value="Update" class="btn btn-outline-primary mt-3"/>
 			</form:form>
 		</div>
 	</div>

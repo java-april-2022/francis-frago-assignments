@@ -2,6 +2,10 @@ package com.ffrago.savetravels.services;
 
 import java.util.List;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import java.util.Optional;
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 =======
 import java.util.Optional;
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
@@ -20,7 +24,11 @@ public class ExpenseService {
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 // return all expenses
+=======
+	 // returns all the expenses
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 =======
 	 // returns all the expenses
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
@@ -29,11 +37,14 @@ public class ExpenseService {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     // create an expense
     public ExpenseModel createExpense(ExpenseModel b) {
         return expenseRepository.save(b);
     }
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
     // creates a expense
     public ExpenseModel createExpense(ExpenseModel b) {
         return expenseRepository.save(b);
@@ -63,5 +74,8 @@ public class ExpenseService {
     		System.out.println("Failed to delete");
     	}
     }
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 }

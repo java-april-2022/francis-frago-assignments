@@ -9,15 +9,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -28,6 +34,7 @@ public class ExpenseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     @NotBlank
@@ -47,6 +54,8 @@ public class ExpenseModel {
     private String description;
 
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
     
     @NotNull
     @Size(min = 1, message="Expenses must be at least 1 character.")
@@ -60,6 +69,9 @@ public class ExpenseModel {
     @Min(value=1, message = "Must be at least 1 dollar")
     private Double amount;
     
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
     // This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
@@ -69,6 +81,7 @@ public class ExpenseModel {
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public ExpenseModel() {
@@ -83,6 +96,8 @@ public class ExpenseModel {
     
     //Getters and Setters
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
     public ExpenseModel() {
     }
     
@@ -94,6 +109,9 @@ public class ExpenseModel {
     
     //getters and setters
 
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
     public Long getId() {
 		return id;
@@ -103,6 +121,7 @@ public class ExpenseModel {
 		this.id = id;
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public String getName() {
 		return name;
@@ -117,11 +136,16 @@ public class ExpenseModel {
 	public void setDescription(String description) {
 		this.description = description;
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 	public String getExpDescription() {
 		return expDescription;
 	}
 	public void setExpDescription(String expDescription) {
 		this.expDescription = expDescription;
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 	}
 
@@ -134,17 +158,23 @@ public class ExpenseModel {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public Float getAmount() {
 		return amount;
 	}
 
 	public void setAmount(Float amount) {
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 	public Double getAmount() {
 		return amount;
 	}
 
 	public void setAmount(Double amount) {
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 		this.amount = amount;
 	}
@@ -154,12 +184,18 @@ public class ExpenseModel {
         this.createdAt = new Date();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 
 	// right before it's created, save the date
     @PreUpdate
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
+<<<<<<< HEAD
+>>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
+=======
 >>>>>>> 886370d27c3a0fefe34e41921cca32ee34987097
 }
